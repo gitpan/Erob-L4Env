@@ -6,7 +6,7 @@
 # with L4Env et al. 
 package Erob::L4Env;
 
-# stick with 5.0.5 
+# Stick with 5.0.5 
 # unless we need features in >= 5.8. 
 use 5.00005;
 
@@ -14,7 +14,7 @@ use vars qw($VERSION);
 
 use strict;
 
-$VERSION = "0.01_09";
+$VERSION = "0.01_11";
 
 # Preloaded methods go here.
 
@@ -45,9 +45,9 @@ Erob::L4Env - Perl extension to the L4Env API
 
 	MkPrivateHeader
 	(
-		libio			=>	'My::Module::GenericIO',
-		libsomething	=>	'My::Lib::SomeThing',
-		output			=>	'lib_hello_world.h',
+	 	libio			=>	'My::Module::GenericIO',
+	 	libsdl	=>	'My::SDL',
+	 	output			=>	'lib_hello_world.h',
 	)->as_string();
 		
 =head1 DESCRIPTION
@@ -57,19 +57,20 @@ For an introduction to L4, please refer to L<Erob::L4Env::Introduction>.
 
 =head2 Design decisions and implementation
 
-I will describe here two distinct approaches concerning any 
-eventual implementation. 
+First, I'll describe two distinct approaches to
+implement this module. 
 
-For the sake of simplicity, the target interface
-should be known as I<hello_world>. 
+Please note that for the sake of simplicity, 
+our application should be known or refered as I<hello_world>. 
 
-=head2 Scenario 1: generating hello_world.h from perl
+=head3 Scenario 1: generating hello_world.h from perl
 
-This is the easiest approach so far. It involve generating
-a C header file magically, then to code by hand the
-main program in C langage (with raw l4_* bindings). 
+This approach seem's like the easiest to implement. 
+It consist of creating the C header file needed by
+the application. Finally, the file I<hello_world.c>
+may need to be coded by hand. 
 
-head2 Scenario 2: learning from mod_perl and beyond
+=head3 Scenario 2: learning from mod_perl and beyond
 
 This approach consist of developing a perl-interpreter
 portable on L4. So far, there's no report whatsoever
@@ -89,19 +90,10 @@ This method is exported by default.
 
 =over
 
-=item * L<Erob::L4Env::Introduction>	
+=item * Erob::L4Env::Introduction
 
 Introduction to L4 from a perl-programmer perspective.
-My goals and some incentives surrounding L4 research and development.
-
-=item * Erob::L4Env::GenericIO
-
-Perlish implementation of DROPS GenericIO. 
-
-Several DROPS subsystems already
-use it instead of the OSKit?
-
-Not yet.
+My goals and some incentives towards L4 research and development.
 
 =item * Erob::L4Env::Notes
 
@@ -128,7 +120,7 @@ Cannot drop-in perl5 modules yet.
 
 =head1 AUTHOR
 
-Etienne Robillard, E<lt>erob (at) cpan (dot) orgE<gt>
+Etienne Robillard, erob (at) cpan (dot) org
 
 =head1 COPYRIGHT AND LICENSE
 
