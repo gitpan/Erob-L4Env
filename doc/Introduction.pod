@@ -4,14 +4,16 @@
 
 =head2 Opening
 
-Welcome to the L<L4Env::Dice> project! 
+Welcome to the L<Erob::L4Env> project! 
 
 =head2 Short introduction to L4 
 
-L4 is a real-time microkernel architecture. 
+L4 is a real-time microkernel architecture suitable
+for small/embedded applications. 
+
 It was first developed by Jochen Liedtke et al.
 
 =head1 METHODOLOGY 
 
-META: Draft-mode!
+META: TODO
 

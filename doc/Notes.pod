@@ -1,0 +1,23 @@
+=head1 NOTES
+
+Insert relevant notes here.
+
+=head2 The DROPS L4Env API
+
+You can find up-to-date documentation for 'L4Env' at:
+L<http://os.inf.tu-dresden.de/l4env/doc>.
+
+=head2 On h2xs, perlcc and (perl) backends in general
+
+L<h2xs> is a tool designed to produce XS code and perl extensions
+from C headers file.
+
+You generally invoke the B::C backend like this:
+
+	# compile into a binary executable file:    
+	perl -MO=C, -o some_app some_app.pm 
+
+=cut
+
+
+

@@ -5,5 +5,5 @@ README
 META.yml
 t/Erob-L4Env.t
 lib/Erob/L4Env.pm
-lib/Erob/L4Env/Story/Introduction.pod
-lib/Erob/L4Env/Story/Notes.pod
+doc/Introduction.pod
+doc/Notes.pod
