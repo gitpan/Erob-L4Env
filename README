@@ -1,0 +1,78 @@
+Erob::L4Env version 0.01
+=======================
+
+	Erob::L4Env is a perl framework to facilitate
+	development of user-defined L4 subsystems. 
+	
+	In short, here is several hooks (mnemonic: glue code)
+	to the L4Env kit -- a common L4 development environment.
+
+	The current state of this module is reflected
+	by issuing:
+
+	$ perldoc Erob::L4Env 
+
+INSTALLATION
+============
+
+To install this module type the following:
+
+   perl Build.PL
+   perl Build.PL install
+
+To conduct tests use:
+
+   perl Build test
+
+
+DEPENDENCIES
+============
+
+	L4 microkernel on IA_32. Support for non IA_32 hardware 
+	is 
+	considered experimental and deserve interest! 
+	
+	Pay attention to the L4 specification you plan to use.
+
+	Version 2 API (Fiasco) 
+		or
+	X.2 API (L4Ka::Pistachio, L4Linux)
+		or
+	Version 4 (Your hardware here :-)
+
+	A working IDL compiler (Dice or IDL4). 
+
+	L4Env (DROPS version) and/or OSKit.
+
+	GCC 	>= 3.4
+
+	perl 	>= 5.8.5 
+	
+NOTICE
+======
+
+	***	This 'whole thing' *is* definitly *and* utterly experimental! ***
+
+	The user acknowledges full responsability 
+	over his use if all things fall apart (kind of sad, heh?).
+
+	In others words,
+	you're on our own in the case thou expect something out of it. 
+
+	Please consult the mailing-list to ask questions or to
+	post comments surrounding any aspect of this project, 
+	at http://groups.yahoo.com/group/perl-L4.
+ 
+	For everything else, 
+
+	Happy Hacking!
+
+COPYRIGHT AND LICENCE
+=====================
+
+	Copyright (C) 2004 by Etienne Robillard
+
+	This library is free software; you can redistribute it and/or modify
+	it under the same terms as Perl itself, either Perl version 5.8.5 or,
+	at your option, any later version of Perl 5 you may have available.
+
